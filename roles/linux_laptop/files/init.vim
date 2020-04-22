@@ -58,6 +58,16 @@ let g:python3_host_prog = '/home/kevin/.local/share/nvim/nvim-py3/bin/python'
 " ---------------------
 let g:black_virtualenv='/home/kevin/.local/share/nvim/nvim-py3'
 
+
+" flake8 binary path
+" ------------------
+let g:flake8_cmd='/home/kevin/.local/share/nvim/nvim-py3/bin/flake8'
+
+" syntastic checkers settings
+" ------------------------
+let g:syntastic_python_flake8_exec='/home/kevin/.local/share/nvim/nvim-py3/bin/flake8'
+let g:syntastic_python_checkers=['python', 'flake8', 'mypy']
+
 " Key mappings
 " ------------
 let mapleader = ","
