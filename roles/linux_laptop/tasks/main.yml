@@ -6,7 +6,6 @@
 - include: "graphical-applications.yml"
 - include: "console-font.yml"
 - include: "power-configuration.yml"
-- include: "kevin-gnome-shell-settings.yml"
-- include: "gdm-gnome-shell-settings.yml"
+- include: "apply-gnome-shell-settings.yml"
 - include: "python3-setup.yml"
 - include: "neovim.yml"

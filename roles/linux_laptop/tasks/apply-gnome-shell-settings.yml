@@ -3,4 +3,10 @@
   become: yes
   become_user: "{{ become_username }}"
   vars:
+    become_username: gdm
+
+- include: "gnome-shell-settings.yml"
+  become: yes
+  become_user: "{{ become_username }}"
+  vars:
     become_username: kevin
