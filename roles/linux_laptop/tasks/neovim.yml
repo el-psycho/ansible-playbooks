@@ -1,0 +1,61 @@
+---
+- name: Install neovim
+  package:
+    state: present
+    name: neovim
+
+- name: Create .local/share/nvim/site/autoload directory
+  file:
+    path: /home/kevin/.local/share/nvim/site/autoload
+    state: directory
+    owner: kevin
+    group: kevin
+    mode: '0755'
+
+- name: Create .config/nvim direcory
+  file:
+    path: /home/kevin/.config/nvim
+    state: directory
+    owner: kevin
+    group: kevin
+    mode: '0755'
+
+- name: Create .vim/plugged directory
+  file:
+    path: /home/kevin/.vim/plugged
+    state: directory
+    owner: kevin
+    group: kevin
+    mode: '0755'
+
+- name: Install vim-plug for neovim
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: /home/kevin/.local/share/nvim/site/autoload/plug.vim
+    owner: kevin
+    group: kevin
+    mode: '0644'
+
+- name: Set neovim's init.vim contents
+  copy:
+    src: files/init.vim
+    dest: /home/kevin/.config/nvim/init.vim
+    owner: kevin
+    group: kevin
+    mode: '0644'
+
+- name: Upgrade vim-plug to the latest version
+  command: nvim --headless -c PlugUpgrade -c q -c q
+  become: true
+  become_user: kevin
+
+- name: Install/update neovim plugins
+  command: nvim --headless -c PlugUpdate -c q -c q
+  become: true
+  become_user: kevin
+
+- name: Update neovim remote plugins
+  command: nvim --headless -c UpdateRemotePlugins -c q -c q
+  become: true
+  become_user: kevin
+

@@ -1,0 +1,17 @@
+---
+- name: Install basic cli applications and daemons
+  package:
+    state: present
+    name:
+      - dnf-plugins-core
+      - dnf-utils
+      - java-1.8.0-openjdk
+      - icedtea-web
+      - ipmitool
+      - libvirt
+      - podman
+      - python27
+      - htop
+      - curl
+      - nmap
+

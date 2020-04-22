@@ -1,0 +1,35 @@
+---
+- name: Install graphical applications
+  package:
+    state: present
+    name:
+      - deluge
+      - firefox
+      - tilix
+      - wireshark
+      - virt-manager
+      - virt-viewer
+      - vlc
+
+- name: Install remmina remote desktop app and plugins
+  package:
+    state: present
+    name:
+      - remmina
+      - remmina-plugins-rdp
+      - remmina-plugins-spice
+      - remmina-plugins-vnc
+      - remmina-plugins-secret
+
+- name: Install Slack flatpak
+  flatpak:
+    remote: flathub
+    name: com.slack.Slack
+    state: present
+
+- name: Install Signal flatpak
+  flatpak:
+    remote: flathub
+    name: org.signal.Signal
+    state: present
+

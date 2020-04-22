@@ -1,0 +1,8 @@
+---
+- name: Set power button action to interactive
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/power-button-action"
+    value: "'interactive'"
+    state: present
+  become: yes
+  become_user: kevin

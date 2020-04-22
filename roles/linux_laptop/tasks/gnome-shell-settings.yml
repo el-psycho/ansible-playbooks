@@ -1,0 +1,43 @@
+---
+- name: Set clock to 12h format for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-format"
+    value: "'12h'"
+    state: present
+
+- name: Show clock weekday for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
+    state: present
+
+- name: Show battery percentage for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+    state: present
+
+- name: Disable touchpad natural scrolling for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
+    value: "false"
+    state: present
+
+- name: Enable touchpad tap to click for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/tap-to-click"
+    value: "true"
+    state: present
+
+- name: Enable touchpad two finger scrolling for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/two-finger-scrolling-enabled"
+    value: "true"
+    state: present
+
+- name: Do not show universal access menu for user {{ become_username }}
+  dconf:
+    key: "/org/gnome/desktop/a11y/always-show-universal-access-status"
+    value: "false"
+    state: present
+

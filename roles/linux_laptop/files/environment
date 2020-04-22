@@ -1,0 +1,3 @@
+HISTCONTROL="ignoredups"
+HISTTIMEFORMAT="%F %T "
+

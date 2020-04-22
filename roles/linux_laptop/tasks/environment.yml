@@ -1,0 +1,16 @@
+---
+- name: Set /etc/environment contents
+  copy:
+    src: files/environment
+    dest: /etc/environment
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Insert smarter shell history search in /etc/inputrc
+  blockinfile:
+    path: /etc/inputrc
+    block: |
+      # Smarter history
+      "\e[A":history-search-backward
+      "\e[B":history-search-forward

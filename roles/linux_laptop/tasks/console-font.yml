@@ -1,0 +1,16 @@
+---
+- name: Install terminus fonts
+  package:
+    name:
+      - terminus-fonts
+      - terminus-fonts-console
+    state: present
+
+- name: Set font in /etc/vconsole.conf
+  lineinfile:
+    path: /etc/vconsole.conf
+    regexp: '^FONT='
+    line: 'FONT="ter-v18n"'
+    state: present
+
+

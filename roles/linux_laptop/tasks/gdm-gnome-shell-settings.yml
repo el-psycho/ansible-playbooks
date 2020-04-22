@@ -1,0 +1,6 @@
+---
+- include: "gnome-shell-settings.yml"
+  become: yes
+  become_user: "{{ become_username }}"
+  vars:
+    become_username: gdm
