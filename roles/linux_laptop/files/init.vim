@@ -82,3 +82,9 @@ autocmd BufWritePre *.py execute ':Black'
 " Close the preview window after deoplete completion is done
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
 
+" Some filetypes need tabs instead of spaces
+" ------------------------------------------
+autocmd Filetype ini setlocal noexpandtab
+au BufNewFile,BufRead .flake8 setf ini
+autocmd Filetype make setlocal noexpandtab
+
