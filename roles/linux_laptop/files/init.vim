@@ -28,6 +28,7 @@ set tabstop=2
 set colorcolumn=80
 set list lcs=tab:\|\ 
 set path+=**
+set updatetime=500
 
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
@@ -42,7 +43,7 @@ let g:NERDCommentEmptyLines = 1
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 100
-let g:deoplete#sources#jedi#show_docstring = 1
+let g:deoplete#sources#jedi#show_docstring = 0
 
 let g:vim_json_syntax_conceal = 0
 
@@ -52,7 +53,7 @@ colorscheme gruvbox
 " Makes the background transparent
 hi Normal guibg=NONE ctermbg=NONE
 
-" Neovim virtualenv python interpreter paths
+" Neovim virtualenv python3 interpreter path
 " ------------------------------------------
 let g:python3_host_prog = '/home/kevin/.local/share/nvim/nvim-py3/bin/python'
 
@@ -65,8 +66,9 @@ let g:black_virtualenv='/home/kevin/.local/share/nvim/nvim-py3'
 " ------------------
 let g:flake8_cmd='/home/kevin/.local/share/nvim/nvim-py3/bin/flake8'
 
-" syntastic checkers settings
+" syntastic settings
 " ------------------------
+let g:syntastic_check_on_open = 1
 let g:syntastic_python_flake8_exec='/home/kevin/.local/share/nvim/nvim-py3/bin/flake8'
 let g:syntastic_python_checkers=['python', 'flake8', 'mypy']
 
