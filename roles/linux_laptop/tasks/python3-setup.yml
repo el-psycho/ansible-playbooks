@@ -3,5 +3,6 @@
   package:
     state: present
     name:
+      - pipenv
       - python3-psutil
       - python3-virtualenv

@@ -10,7 +10,6 @@
       - ipmitool
       - libvirt
       - podman
-      - python27
       - htop
       - curl
       - nmap
