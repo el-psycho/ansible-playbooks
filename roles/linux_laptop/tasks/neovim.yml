@@ -28,6 +28,18 @@
     group: kevin
     mode: '0755'
 
+- name: Install pip packages for nvim in a dedicated virtualenv
+  become: yes
+  become_user: kevin
+  pip:
+    virtualenv: /home/kevin/.local/share/nvim/nvim-py3
+    name:
+      - black
+      - flake8
+      - jedi
+      - mypy
+      - pynvim
+
 - name: Install vim-plug for neovim
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
