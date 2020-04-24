@@ -49,6 +49,8 @@ let g:vim_json_syntax_conceal = 0
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
+" Makes the background transparent
+hi Normal guibg=NONE ctermbg=NONE
 
 " Neovim virtualenv python interpreter paths
 " ------------------------------------------
