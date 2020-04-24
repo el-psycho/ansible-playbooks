@@ -27,6 +27,7 @@ set shiftwidth=2
 set tabstop=2
 set colorcolumn=80
 set list lcs=tab:\|\ 
+set path+=**
 
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
@@ -51,7 +52,6 @@ colorscheme gruvbox
 
 " Neovim virtualenv python interpreter paths
 " ------------------------------------------
-"let g:python_host_prog = '/home/kevin/.local/share/nvim/nvim-py2/bin/python'
 let g:python3_host_prog = '/home/kevin/.local/share/nvim/nvim-py3/bin/python'
 
 " Black virtualenv path
