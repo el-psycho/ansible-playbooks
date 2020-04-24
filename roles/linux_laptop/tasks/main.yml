@@ -3,6 +3,7 @@
 - include: "yum-repositories.yml"
 - include: "flatpak-remotes.yml"
 - include: "base-packages.yml"
+- include: "powerline.yml"
 - include: "graphical-applications.yml"
 - include: "console-font.yml"
 - include: "power-configuration.yml"

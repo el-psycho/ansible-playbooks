@@ -1,0 +1,12 @@
+---
+- name: Download powerline-go binary
+  get_url:
+    url: https://github.com/justjanne/powerline-go/releases/download/v1.16.1/powerline-go-linux-amd64
+    dest: /home/kevin/bin/powerline-go
+    checksum: sha256:aa2c0d6a3690912d9cd165eb7d41d64d97a68f7772a57cda55129c35d6999423
+    mode: '0755'
+
+- name: Install powerline-fonts package
+  package:
+    name: powerline-fonts
+    state: present
