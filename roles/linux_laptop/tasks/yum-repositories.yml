@@ -17,3 +17,12 @@
     owner: root
     group: root
     mode: '0644'
+
+- name: Install Microsoft YUM repository
+  yum_repository:
+    name: packages-microsoft-com-prod
+    description: Microsoft Packages - Prod
+    baseurl: https://packages.microsoft.com/rhel/7/prod/
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+
