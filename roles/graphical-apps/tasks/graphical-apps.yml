@@ -1,0 +1,13 @@
+---
+- name: Install graphical applications
+  package:
+    state: present
+    name:
+      - deluge
+      - firefox
+      - tilix
+      - wireshark
+      - virt-manager
+      - virt-viewer
+      - vlc
+

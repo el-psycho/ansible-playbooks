@@ -1,0 +1,13 @@
+---
+- name: Install Slack flatpak
+  flatpak:
+    remote: flathub
+    name: com.slack.Slack
+    state: present
+
+- name: Install Signal flatpak
+  flatpak:
+    remote: flathub
+    name: org.signal.Signal
+    state: present
+

@@ -1,0 +1,11 @@
+---
+- name: Install remmina remote desktop app and plugins
+  package:
+    state: present
+    name:
+      - remmina
+      - remmina-plugins-rdp
+      - remmina-plugins-spice
+      - remmina-plugins-vnc
+      - remmina-plugins-secret
+

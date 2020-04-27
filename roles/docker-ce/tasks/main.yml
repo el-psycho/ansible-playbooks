@@ -1,0 +1,5 @@
+---
+- include: repositories.yml
+  tags: docker-ce
+- include: packages.yml
+  tags: docker-ce

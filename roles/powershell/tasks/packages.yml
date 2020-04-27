@@ -1,0 +1,7 @@
+---
+- name: Install PowerShell
+  package:
+    state: present
+    name:
+      - powershell
+

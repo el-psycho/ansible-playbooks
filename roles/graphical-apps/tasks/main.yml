@@ -1,0 +1,3 @@
+---
+- include: graphical-apps.yml
+  tags: graphical-apps

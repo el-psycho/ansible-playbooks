@@ -10,7 +10,6 @@
       - ipmitool
       - libvirt
       - podman
-      - powershell
       - htop
       - curl
       - nmap

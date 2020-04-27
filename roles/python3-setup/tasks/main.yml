@@ -1,0 +1,3 @@
+---
+- include: python3-setup.yml
+  tags: python3-setup

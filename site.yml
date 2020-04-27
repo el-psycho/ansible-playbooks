@@ -4,4 +4,16 @@
   connection: local
   become: yes
   roles:
-    - linux_laptop
+    - console-font
+    - docker-ce
+    - environment-vars
+    - flatpak-packages
+    - gnome-shell
+    - graphical-apps
+    - neovim
+    - power-config
+    - powerline-go
+    - powershell
+    - python3-setup
+    - remmina
+    - yum-packages

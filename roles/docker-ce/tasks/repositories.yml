@@ -1,0 +1,21 @@
+---
+- name: Check if Docker CE YUM repo file already exists
+  stat:
+    path: /etc/yum.repos.d/docker-ce.repo
+  register: repofile
+
+- name: Install Docker CE YUM repo
+  when: not repofile.stat.exists
+  get_url:
+    url: https://download.docker.com/linux/fedora/docker-ce.repo
+    checksum: sha256:3af973c1f2e16a032a11074eb22b440894ad4936c9ca86b666f8cf8342b7bea7
+    dest: /etc/yum.repos.d/docker-ce.repo
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Patch Docker CE's repo file to use Fedora 31 packages
+  replace:
+    path: /etc/yum.repos.d/docker-ce.repo
+    regexp: '\$releasever'
+    replace: '31'

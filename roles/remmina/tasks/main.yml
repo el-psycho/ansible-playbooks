@@ -1,0 +1,3 @@
+---
+- include: remmina.yml
+  tags: remmina

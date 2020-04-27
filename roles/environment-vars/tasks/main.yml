@@ -1,0 +1,3 @@
+---
+- include: environment.yml
+  tags: environment-vars
