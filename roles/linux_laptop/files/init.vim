@@ -41,10 +41,6 @@ let g:indentLine_showFirstIndentLevel = 1
 
 let g:NERDCommentEmptyLines = 1
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 100
-let g:deoplete#sources#jedi#show_docstring = 0
-
 let g:vim_json_syntax_conceal = 0
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -61,10 +57,15 @@ let g:python3_host_prog = '/home/kevin/.local/share/nvim/nvim-py3/bin/python'
 " ---------------------
 let g:black_virtualenv='/home/kevin/.local/share/nvim/nvim-py3'
 
-
 " flake8 binary path
 " ------------------
 let g:flake8_cmd='/home/kevin/.local/share/nvim/nvim-py3/bin/flake8'
+
+" deoplete settings
+" -----------------
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('jedi', 'show_docstring', 0)
+call deoplete#custom#option('auto_complete_delay', 100)
 
 " syntastic settings
 " ------------------------
