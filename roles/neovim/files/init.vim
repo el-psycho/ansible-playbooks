@@ -1,7 +1,7 @@
 " Plugins
 " -------
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'fatih/vim-go'
@@ -30,24 +30,31 @@ set list lcs=tab:\|\
 set path+=**
 set updatetime=500
 
-au BufNewFile,BufRead Jenkinsfile setf groovy
+let g:NERDCommentEmptyLines = 1
+let g:vim_json_syntax_conceal = 0
 
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
-
+" IndentLine settings
+" -------------------
 let g:indentLine_char = '┊'
 let g:indentLine_first_char = '┊'
 let g:indentLine_showFirstIndentLevel = 1
 
-let g:NERDCommentEmptyLines = 1
-
-let g:vim_json_syntax_conceal = 0
-
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-
+" Colorscheme
+" -----------
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_enable_italic = 1
+let g:indentLine_setColors = 0
+let g:gruvbox_material_palette = 'material'
+colorscheme gruvbox-material
 " Makes the background transparent
 hi Normal guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
+
+
+" Airline settings
+" -----------------
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'gruvbox_material'
 
 " Neovim virtualenv python3 interpreter path
 " ------------------------------------------
@@ -92,4 +99,8 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
 autocmd Filetype ini setlocal noexpandtab
 au BufNewFile,BufRead .flake8 setf ini
 autocmd Filetype make setlocal noexpandtab
+
+" Apply a specific filetype/syntax for filenames
+" ----------------------------------------------
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
