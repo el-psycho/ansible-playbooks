@@ -71,3 +71,11 @@
   become: true
   become_user: kevin
 
+- name: Hard link gruvbox-material to airline-themes
+  file:
+    src: /home/kevin/.vim/plugged/gruvbox-material/autoload/airline/themes/gruvbox_material.vim
+    dest: /home/kevin/.vim/plugged/vim-airline-themes/autoload/airline/themes/gruvbox_material.vim
+    owner: kevin
+    group: kevin
+    state: hard
+
