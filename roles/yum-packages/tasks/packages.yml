@@ -5,6 +5,7 @@
     name:
       - dnf-plugins-core
       - dnf-utils
+      - golang
       - java-1.8.0-openjdk
       - jq
       - icedtea-web
