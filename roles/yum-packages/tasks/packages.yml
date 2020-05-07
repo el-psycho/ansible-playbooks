@@ -6,6 +6,7 @@
       - dnf-plugins-core
       - dnf-utils
       - java-1.8.0-openjdk
+      - jq
       - icedtea-web
       - ipmitool
       - libvirt
